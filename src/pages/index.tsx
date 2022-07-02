@@ -89,8 +89,11 @@ const Home: NextPage = () => {
               lineHeight={"110%"}
               // minW={"400px"}
             >
-              Real Rick Roll as a Service
-              <span style={{ fontSize: "1.5rem", fontStyle: "italic" }}>s</span>
+              Reverse Rick Roll <br />
+              as a Service&nbsp;
+              <span style={{ fontSize: "1.5rem", fontStyle: "italic" }}>
+                solution
+              </span>
             </Heading>
             <Text color={"gray.500"} maxW={600}>
               Never gonna give you up, never gonna let you down, never gonna run
