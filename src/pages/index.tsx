@@ -21,7 +21,13 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>RRRaaSs</title>
+        <title>RRRaaSs | 👦🏻🎤🕺🏻</title>
+        <meta
+          name="description"
+          content="Real Rick Roll as a Service(s) for your loved ones."
+        />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <script async src="https://api.countapi.xyz/hit/RRRaaSs/visits" />
       </Head>
       <Button
         position="fixed"
@@ -113,9 +119,7 @@ const Home: NextPage = () => {
           </Stack>
           {/* section 2 */}
           <Stack py={24} spacing={12}>
-            <Heading alignSelf={"center"}>
-              Even deaf can be rick rolled
-            </Heading>
+            <Heading alignSelf={"center"}>Even deaf can be rick rolled</Heading>
             <Stack spacing={10} align={"center"}>
               <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
@@ -138,7 +142,6 @@ const Home: NextPage = () => {
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-             
             </Stack>
           </Stack>
         </Stack>
@@ -153,7 +156,7 @@ const Home: NextPage = () => {
       </Flex>
       {/* buy now section */}
       <Stack
-        spacing={{base:20, md:28}}
+        spacing={{ base: 20, md: 28 }}
         w={"100vw"}
         minH={"100vh"}
         bgColor={"orange.300"}
