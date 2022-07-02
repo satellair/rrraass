@@ -41,7 +41,7 @@ export default function Model() {
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={null}>
           <Scene />
-          <OrbitControls autoRotate={true} autoRotateSpeed={10} />
+          <OrbitControls autoRotate={true} autoRotateSpeed={50} enableZoom={false} />
           {/* <Environment preset="sunset" background /> */}
         </Suspense>
       </Canvas>

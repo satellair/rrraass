@@ -12,7 +12,7 @@ import {
   SimpleGrid,
   createIcon,
 } from "@chakra-ui/react";
-import ฟีเจอร์การ์ด from "@components/featureCard";
+import { การ์ดฟีเจอร์, Model } from "@components";
 // import สินค้าการ์ด from "@components/productCard";
 import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
@@ -73,63 +73,63 @@ const Home: NextPage = () => {
               Making deaf can be rick rolled
             </Heading>
             <Stack spacing={10} align={"center"}>
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
-              <ฟีเจอร์การ์ด
+              <การ์ดฟีเจอร์
                 หัวข้อ={"Lifetime Support"}
                 ข้อความ={
                   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
@@ -144,12 +144,15 @@ const Home: NextPage = () => {
         <Box
           w="100px"
           h="100px"
-          bgColor={"red.300"}
+          // bgColor={"red.300"}
           flex={{ base: 0, md: 1 }}
         ></Box>
+        <Box position="fixed" right={15} top={5} w="50%" zIndex={0} >
+          <Model />
+        </Box>
       </Flex>
       {/* buy now section */}
-      <Flex w={"100vw"} minH={"100vh"} bgColor={"red.300"}>
+      <Flex w={"100vw"} minH={"100vh"} bgColor={"red.300"} zIndex={0}>
         <Container>
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}></SimpleGrid>
         </Container>
