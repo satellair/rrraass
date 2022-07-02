@@ -12,9 +12,11 @@ import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
 
+type Props = { speed?: number; scale?: number };
+
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
-const Scene = () => {
+const Scene = ({ scale = 30 }: { scale: number }) => {
   //   const materials = useLoader(MTLLoader, "Poimandres.mtl");
   const obj = useLoader(OBJLoader, "models/rr.obj", (loader) => {
     // materials.preload();
@@ -22,7 +24,7 @@ const Scene = () => {
   });
 
   console.log(obj);
-  return <primitive object={obj} scale={30} />;
+  return <primitive object={obj} scale={scale} />;
 };
 
 const Loader = () => {
@@ -32,7 +34,8 @@ const Loader = () => {
   );
 };
 
-export default function Model() {
+const Model = (props: Props) => {
+  const { speed = 30, scale } = props;
   return (
     <>
       <Canvas style={{ height: "50vh" }}>
@@ -40,11 +43,16 @@ export default function Model() {
         {/* <ambientLight /> */}
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={null}>
-          <Scene />
-          <OrbitControls autoRotate={true} autoRotateSpeed={50} enableZoom={false} />
+          <Scene scale={scale!} />
+          <OrbitControls
+            autoRotate={true}
+            autoRotateSpeed={speed}
+            enableZoom={false}
+          />
           {/* <Environment preset="sunset" background /> */}
         </Suspense>
       </Canvas>
     </>
   );
-}
+};
+export default Model;
