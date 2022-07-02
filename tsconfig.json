@@ -36,8 +36,9 @@
       "@types"        : ["src/types/index.ts"],
       "@types/*"      : ["src/types/*"],
       // public
+      "@public"       : ["public/*"],
       "@sounds"       : ["public/sounds/*"],
-      "@fonts"       : ["public/fonts/*"],
+      "@fonts"        : ["public/fonts/*"],
     }
   },
   "compileOnSave": true,
