@@ -29,19 +29,15 @@
       // style
       "@styles"       : ["src/styles/index.ts"],
       "@styles/*"     : ["src/styles/*"],
-      // common
-      "@components"   : ["src/commons/components/index.ts"],
-      "@components/*" : ["src/commons/components/*"],
-      "@hooks"        : ["src/commons/hooks/index.ts"],
-      "@hooks/*"      : ["src/commons/hooks/*"],
-      "@layouts"      : ["src/commons/layouts/index.ts"],
-      "@layouts/*"    : ["src/commons/layouts/*"],
-      "@utils"        : ["src/commons/utils/index.ts"],
-      "@utils/*"      : ["src/commons/utils/*"],
-      "@types"        : ["src/commons/types/index.ts"],
-      "@types/*"      : ["src/commons/types/*"],
+      "@components"   : ["src/components/index.ts"],
+      "@components/*" : ["src/components/*"],
+      "@hooks"        : ["src/hooks/index.ts"],
+      "@hooks/*"      : ["src/hooks/*"],
+      "@types"        : ["src/types/index.ts"],
+      "@types/*"      : ["src/types/*"],
       // public
-      "@images"       : ["public/images/*"],
+      "@sounds"       : ["public/sounds/*"],
+      "@fonts"       : ["public/fonts/*"],
     }
   },
   "compileOnSave": true,
