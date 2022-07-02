@@ -11,6 +11,7 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
+import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
 type Props = { speed?: number; scale?: number };
 
@@ -30,7 +31,15 @@ const Scene = ({ scale = 30 }: { scale: number }) => {
 const Loader = () => {
   const { progress } = useProgress();
   return (
-    <Html center>{progress === 100 ? <></> : <>{progress} % loaded</>}</Html>
+    <Html center>
+      {progress === 100 ? (
+        <></>
+      ) : (
+        <CircularProgress value={progress} color="green.400">
+          <CircularProgressLabel>{progress}%</CircularProgressLabel>
+        </CircularProgress>
+      )}
+    </Html>
   );
 };
 
@@ -38,7 +47,7 @@ const Model = (props: Props) => {
   const { speed = 30, scale } = props;
   return (
     <>
-      <Canvas style={{ height: "50vh" }}>
+      <Canvas style={{ height: "100%" }}>
         <Loader />
         {/* <ambientLight /> */}
         <pointLight position={[10, 10, 10]} />
