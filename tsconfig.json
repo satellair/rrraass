@@ -1,6 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "jsx": "preserve",
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "resolveJsonModule": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -8,13 +20,31 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    // custom paths
+    "paths": {
+      // pages
+      "@pages"        : ["src/pages/index.tsx"],
+      "@pages/*"      : ["src/pages/*"],
+      // style
+      "@styles"       : ["src/styles/index.ts"],
+      "@styles/*"     : ["src/styles/*"],
+      // common
+      "@components"   : ["src/commons/components/index.ts"],
+      "@components/*" : ["src/commons/components/*"],
+      "@hooks"        : ["src/commons/hooks/index.ts"],
+      "@hooks/*"      : ["src/commons/hooks/*"],
+      "@layouts"      : ["src/commons/layouts/index.ts"],
+      "@layouts/*"    : ["src/commons/layouts/*"],
+      "@utils"        : ["src/commons/utils/index.ts"],
+      "@utils/*"      : ["src/commons/utils/*"],
+      "@types"        : ["src/commons/types/index.ts"],
+      "@types/*"      : ["src/commons/types/*"],
+      // public
+      "@images"       : ["public/images/*"],
+    }
   },
+  "compileOnSave": true,
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
