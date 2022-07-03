@@ -13,21 +13,27 @@ import {
   Image,
   SimpleGrid,
   createIcon,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { การ์ดฟีเจอร์, การ์ดสินค้า, โมเด็ล } from "@components";
+import {
+  การ์ดฟีเจอร์,
+  การ์ดสินค้า,
+  โมเด็ล,
+  ดาวน์ซินโดรมโมดอลล์,
+} from "@components";
 // import สินค้าการ์ด from "@components/productCard";
 import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
   const orderNowRef = useRef<null | HTMLDivElement>(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const executeScroll = () =>
     orderNowRef.current?.scrollIntoView({ behavior: "smooth" });
   const handleTrollClick = () => {
-    window.open("https://youtu.be/dQw4w9WgXcQ")
-    
-  }
-
+    onOpen();
+    window.open("https://youtu.be/dQw4w9WgXcQ");
+  };
 
   return (
     <>
@@ -208,6 +214,7 @@ const Home: NextPage = () => {
         >
           I want this!
         </Button>
+        <ดาวน์ซินโดรมโมดอลล์ onClose={onClose} isOpen={isOpen} />
       </Stack>
       {/* <Flex w={"100vw"} bg={"blue.100"} overflow="scroll">
         <Stack py={{ base: 32, md: 40 }}>

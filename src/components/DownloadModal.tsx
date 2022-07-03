@@ -11,6 +11,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Spacer,
 } from "@chakra-ui/react";
 import { FiDownload } from "react-icons/fi";
 
@@ -35,36 +36,22 @@ const DownloadModal = (props: Props) => {
         <ModalCloseButton />
         <ModalBody>
           <Text>
-            <b>Thai Regex Dict</b> คือ
-            พจนานุกรมโอเพนซอร์สที่ใช้สำหรับค้นหาคำศัพท์ภาษาไทยที่มีรูปแบบตามนิพจน์ปรกติ
-            (Regular Expression)
+            JK, but sorry, service not available yet. Please download the model
+            and print by yourself :3
           </Text>
-          <Text>
-            รองรับการทำงานทั้งในรูปเว็บไซต์และ PWA (Progressive Web App)
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://github.com/richeyphu/thai-regex-dict"
-            isExternal
-          >
-            <HStack mt={2} spacing={1}>
-              <Text>เรียนรู้เพิ่มเติม</Text>
-              <Icon.ExternalLink size={18} />
-            </HStack>
-          </Link>
-          {/* <Link
-            color="teal.500"
-            href="https://github.com/richeyphu/thai-regex-dict"
-            isExternal
-          >
-            <HStack mt={2} spacing={1}>
-              <Text>GitHub</Text>
-              <Icon.GitHub size={18} />
-            </HStack>
-          </Link> */}
         </ModalBody>
         <ModalFooter>
-          <Button onClick={onClose}>ปิด</Button>
+          <Button variant="ghost" mr={3} onClick={onClose}>
+            Close
+          </Button>
+          <Button
+            colorScheme="orange"
+            onClick={() => (location.href = "/models/nevergonnagiveyouup.stl")}
+          >
+            <FiDownload />
+            <Spacer />
+            Download
+          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
