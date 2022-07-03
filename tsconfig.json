@@ -30,7 +30,7 @@
       "@styles"       : ["src/styles/index.ts"],
       "@styles/*"     : ["src/styles/*"],
       "@components"   : ["src/components/index.ts"],
-      "@components/*" : ["src/components/*"],
+      //"@components/*" : ["src/components/*"],
       "@hooks"        : ["src/hooks/index.ts"],
       "@hooks/*"      : ["src/hooks/*"],
       "@types"        : ["src/types/index.ts"],
