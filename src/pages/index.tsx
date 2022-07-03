@@ -108,7 +108,7 @@ const Home: NextPage = () => {
               lineHeight={"110%"}
               // minW={"400px"}
             >
-              Reverse <span style={{color: "darkorange"}}>Rickroll</span> <br />
+              Reverse <span style={{color: "#ED8936"}}>Rickroll</span> <br />
               as a Service&nbsp;
               <span style={{ fontSize: "1.5rem", fontStyle: "italic" }}>
                 solution
