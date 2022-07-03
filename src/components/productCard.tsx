@@ -8,20 +8,23 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiMic, FiPlay, FiSquare } from "react-icons/fi";
 
-const data = {
-  isNew: true,
-  imageURL:
-    "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4600&q=80",
-  name: "Wayfarer Classic",
-  price: 4.5,
-  rating: 4.2,
-  numReviews: 34,
-};
-
-const ProductCard = () => {
+const ProductCard = ({ ซอสอะไร๊ }: { ซอสอะไร๊: string }) => {
+  let ซอส;
+  {
+    switch (ซอสอะไร๊) {
+      case "ซอสมะเขือเทศ":
+        ซอส = "/pig/rick.png";
+        break;
+      case "ซอสมะพร้าว":
+        ซอส = "/pig/jarndeang.png";
+        break;
+      case "ซอสมาโย":
+        ซอส = "/pig/president.jpeg";
+        break;
+    }
+  }
   const { isOpen: isPlay, onOpen: Play, onClose: Stop } = useDisclosure();
   return (
     <Flex w="full" alignItems="center" justifyContent="center">
@@ -33,11 +36,13 @@ const ProductCard = () => {
         shadow="lg"
         position="relative"
       >
-        <Box minH={"300px"} maxW={"300px"}>
+        <Box maxW={"300px"} filter={"blur(14px)"}>
           <Image
-            src={data.imageURL}
-            alt={`Picture of ${data.name}`}
+            src={ซอส}
+            alt={ซอสอะไร๊}
+            boxSize={"300px"}
             roundedTop="lg"
+            objectFit={"cover"}
           />
         </Box>
 

@@ -5,14 +5,12 @@ import {
   Box,
   Flex,
   Heading,
-  Container,
   Text,
   Button,
   Stack,
   Icon,
   Image,
   SimpleGrid,
-  createIcon,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -200,9 +198,9 @@ const Home: NextPage = () => {
           ones dissapointed!
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-          <การ์ดสินค้า />
-          <การ์ดสินค้า />
-          <การ์ดสินค้า />
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมะเขือเทศ"/>
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมะพร้าว"/>
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมาโย"/>
         </SimpleGrid>
         <Button
           colorScheme={"green"}

@@ -38,7 +38,7 @@
       // public
       "@public"       : ["public/*"],
       "@sounds"       : ["public/sounds/*"],
-      "@fonts"        : ["public/fonts/*"],
+      "@pig"       : ["public/pig/*"],
     }
   },
   "compileOnSave": true,

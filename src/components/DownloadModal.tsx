@@ -2,7 +2,6 @@ import React from "react";
 import {
   Button,
   Text,
-  Link,
   HStack,
   Modal,
   ModalOverlay,
