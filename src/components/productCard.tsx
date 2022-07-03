@@ -21,7 +21,7 @@ const data = {
   numReviews: 34,
 };
 
-const ProductAddToCart = () => {
+const ProductCard = () => {
   const { isOpen: isPlay, onOpen: Play, onClose: Stop } = useDisclosure();
   return (
     <Flex w="full" alignItems="center" justifyContent="center">
@@ -69,4 +69,4 @@ const ProductAddToCart = () => {
   );
 };
 
-export default ProductAddToCart;
+export default ProductCard;

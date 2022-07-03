@@ -14,7 +14,7 @@ import {
   SimpleGrid,
   createIcon,
 } from "@chakra-ui/react";
-import { การ์ดฟีเจอร์, การ์ดสินค้า, Model } from "@components";
+import { การ์ดฟีเจอร์, การ์ดสินค้า, โมเด็ล } from "@components";
 // import สินค้าการ์ด from "@components/productCard";
 import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
         filter={{ base: "blur(2px)", md: "none" }}
         opacity={{ base: 0.5, md: 1 }}
       >
-        <Model speed={speed} scale={25} />
+        <โมเด็ล speed={speed} scale={25} />
       </Box>
 
       {/* text โว้ยยยย */}
