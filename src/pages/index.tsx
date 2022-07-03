@@ -20,8 +20,14 @@ import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
   const orderNowRef = useRef<null | HTMLDivElement>(null);
+
   const executeScroll = () =>
     orderNowRef.current?.scrollIntoView({ behavior: "smooth" });
+  const handleTrollClick = () => {
+    window.open("https://youtu.be/dQw4w9WgXcQ")
+    
+  }
+
 
   return (
     <>
@@ -198,7 +204,7 @@ const Home: NextPage = () => {
           _hover={{
             bg: "orange.500",
           }}
-          onClick={() => window.open("https://youtu.be/dQw4w9WgXcQ")}
+          onClick={handleTrollClick}
         >
           I want this!
         </Button>
