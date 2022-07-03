@@ -179,7 +179,7 @@ const Home: NextPage = () => {
         ref={orderNowRef}
       >
         <Heading textAlign={"center"}>
-          Don't make your loved{" "}
+          Don&apos;t make your loved{" "}
           <span style={{ fontSize: "0.5rem", fontStyle: "italic" }}>
             or hated
           </span>{" "}
@@ -233,8 +233,16 @@ const Home: NextPage = () => {
         >
           <Image src="favicon.png" w={20} />
         </Flex>
-        <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-          🄯 2022 RRRaaSs. All lefts reserved
+        <Text pt={6} fontSize={"md"} textAlign={"center"} fontWeight="light">
+          #SHiT៦
+        </Text>
+        <Text pt={2} fontSize={"sm"} textAlign={"center"}>
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Copyleft.svg"
+            w="0.7rem"
+            display="inline"
+          />{" "}
+          2022 RRRaaSs. All lefts reserved
         </Text>
       </Box>
     </>
