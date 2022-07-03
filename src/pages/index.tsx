@@ -210,6 +210,7 @@ const Home: NextPage = () => {
           _hover={{
             bg: "orange.500",
           }}
+          size={"lg"}
           onClick={handleTrollClick}
         >
           I want this!
