@@ -11,7 +11,12 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
+import {
+  CircularProgress,
+  // CircularProgressLabel,
+  Image,
+  Box,
+} from "@chakra-ui/react";
 
 type Props = { speed?: number; scale?: number };
 
@@ -35,9 +40,19 @@ const Loader = () => {
       {progress === 100 ? (
         <></>
       ) : (
-        <CircularProgress value={progress} color="green.400">
-          <CircularProgressLabel>{progress}%</CircularProgressLabel>
-        </CircularProgress>
+        <Box pos="relative">
+          <Image
+            src="https://c.tenor.com/q0Ejci9EQhcAAAAi/rick-astley-rick-roll.gif"
+            w="3.5rem"
+            pos="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+          />
+          <CircularProgress value={progress} color="green.400" size="5rem">
+            {/* <CircularProgressLabel>{progress}%</CircularProgressLabel> */}
+          </CircularProgress>
+        </Box>
       )}
     </Html>
   );
