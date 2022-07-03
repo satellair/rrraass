@@ -10,6 +10,7 @@ import {
   Button,
   Stack,
   Icon,
+  Image,
   SimpleGrid,
   createIcon,
 } from "@chakra-ui/react";
@@ -183,6 +184,30 @@ const Home: NextPage = () => {
           </SimpleGrid>
         </Stack>
       </Flex> */}
+      <Box py={10}>
+        <Flex
+          align={"center"}
+          _before={{
+            content: '""',
+            borderBottom: "1px solid",
+            borderColor: "gray.700",
+            flexGrow: 1,
+            mr: 8,
+          }}
+          _after={{
+            content: '""',
+            borderBottom: "1px solid",
+            borderColor: "gray.700",
+            flexGrow: 1,
+            ml: 8,
+          }}
+        >
+          <Image src="favicon.png" w={20} />
+        </Flex>
+        <Text pt={6} fontSize={"sm"} textAlign={"center"}>
+          🄯 2022 RRRaaSs. All lefts reserved
+        </Text>
+      </Box>
     </>
   );
 };
