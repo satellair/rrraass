@@ -64,7 +64,7 @@ const Model = (props: Props) => {
     <>
       <Canvas style={{ height: "100%" }}>
         <Loader />
-        {/* <ambientLight /> */}
+        <ambientLight color={"darkorange"} />
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={null}>
           <Scene scale={scale!} />
