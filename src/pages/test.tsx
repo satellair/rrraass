@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import Model from "@components/model";
+import Model from "@components/Model";
 
 type Props = {};
 
