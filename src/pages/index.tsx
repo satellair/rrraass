@@ -48,6 +48,7 @@ const Home: NextPage = () => {
         h={"48px"}
         fontSize={24}
         onClick={() => setSpeed(speed * 1.25)}
+        zIndex={10}
       >
         ⚡️
       </Button>
@@ -60,6 +61,7 @@ const Home: NextPage = () => {
           h={"48px"}
           fontSize={24}
           onClick={() => setSpeed(30)}
+          zIndex={10}
         >
           🐌
         </Button>
