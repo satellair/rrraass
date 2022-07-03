@@ -255,7 +255,7 @@ const Home: NextPage = () => {
             w="0.7rem"
             display="inline"
           />{" "}
-          2022 RRRaaSs. All lefts reserved
+          2022 RRRaaSs. All rights reversed
         </Text>
       </Box>
     </>
