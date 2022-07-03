@@ -19,8 +19,9 @@ import { การ์ดฟีเจอร์, การ์ดสินค้า
 import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
-  const orderNowRef = useRef<null | HTMLDivElement>(null)
-  const executeScroll = () => orderNowRef.current?.scrollIntoView({ behavior: "smooth" }); 
+  const orderNowRef = useRef<null | HTMLDivElement>(null);
+  const executeScroll = () =>
+    orderNowRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <>
@@ -93,7 +94,7 @@ const Home: NextPage = () => {
               lineHeight={"110%"}
               // minW={"400px"}
             >
-              Reverse Rick Roll <br />
+              Reverse Rickroll <br />
               as a Service&nbsp;
               <span style={{ fontSize: "1.5rem", fontStyle: "italic" }}>
                 solution
@@ -127,26 +128,26 @@ const Home: NextPage = () => {
           </Stack>
           {/* section 2 */}
           <Stack py={24} spacing={12}>
-            <Heading alignSelf={"center"}>Even deaf can be rick rolled</Heading>
+            <Heading alignSelf={"center"}>A Rickroll you can touch</Heading>
             <Stack spacing={10} align={"center"}>
               <การ์ดฟีเจอร์
-                หัวข้อ={"Lifetime Support"}
+                หัวข้อ={"Rickroll for Everyone"}
                 ข้อความ={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+                  "Accessible and affordable, this service is designed for everyone. Even a deaf, or blind, can get rickrolled!"
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
               <การ์ดฟีเจอร์
-                หัวข้อ={"Lifetime Support"}
+                หัวข้อ={"Breaking the Cliché"}
                 ข้อความ={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+                  "Get rid of URL or QR Code rememberer. Tada, a 3D waveform model you can get rickrolled even a deaf or blind!"
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
               <การ์ดฟีเจอร์
-                หัวข้อ={"Lifetime Support"}
+                หัวข้อ={"Satisfaction Guaranteed"}
                 ข้อความ={
-                  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+                  "Not satisfied? We're happy to get rickrolled as you want!"
                 }
                 ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
               />
@@ -174,12 +175,30 @@ const Home: NextPage = () => {
         direction={"column"}
         ref={orderNowRef}
       >
-        <Heading textAlign={"center"}>Rick Roll for Everyone!</Heading>
+        <Heading textAlign={"center"}>
+          Don't make your loved{" "}
+          <span style={{ fontSize: "0.5rem", fontStyle: "italic" }}>
+            or hated
+          </span>{" "}
+          ones dissapointed!
+        </Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <การ์ดสินค้า />
           <การ์ดสินค้า />
           <การ์ดสินค้า />
         </SimpleGrid>
+        <Button
+          colorScheme={"green"}
+          bg={"orange.400"}
+          rounded={"full"}
+          px={6}
+          _hover={{
+            bg: "orange.500",
+          }}
+          onClick={() => window.open("https://youtu.be/dQw4w9WgXcQ")}
+        >
+          I want this!
+        </Button>
       </Stack>
       {/* <Flex w={"100vw"} bg={"blue.100"} overflow="scroll">
         <Stack py={{ base: 32, md: 40 }}>
@@ -189,6 +208,8 @@ const Home: NextPage = () => {
           </SimpleGrid>
         </Stack>
       </Flex> */}
+
+      {/* Footer */}
       <Box py={10}>
         <Flex
           align={"center"}
