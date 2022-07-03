@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 import {
@@ -19,6 +19,9 @@ import { การ์ดฟีเจอร์, การ์ดสินค้า
 import { FcAssistant } from "react-icons/fc";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
+  const orderNowRef = useRef<null | HTMLDivElement>(null)
+  const executeScroll = () => orderNowRef.current?.scrollIntoView({ behavior: "smooth" }); 
+
   return (
     <>
       <Head>
@@ -110,14 +113,15 @@ const Home: NextPage = () => {
             >
               <Button
                 colorScheme={"green"}
-                bg={"green.400"}
+                bg={"orange.400"}
                 rounded={"full"}
                 px={6}
                 _hover={{
-                  bg: "green.500",
+                  bg: "orange.500",
                 }}
+                onClick={executeScroll}
               >
-                Order now
+                Order Now
               </Button>
             </Stack>
           </Stack>
@@ -168,8 +172,9 @@ const Home: NextPage = () => {
         p={20}
         justifyContent={"center"}
         direction={"column"}
+        ref={orderNowRef}
       >
-        <Heading textAlign={"center"}>Even deaf can be rick rolled</Heading>
+        <Heading textAlign={"center"}>Rick Roll for Everyone!</Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <การ์ดสินค้า />
           <การ์ดสินค้า />
