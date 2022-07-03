@@ -20,7 +20,7 @@ import {
   ดาวน์ซินโดรมโมดอลล์,
 } from "@components";
 // import สินค้าการ์ด from "@components/productCard";
-import { FcAssistant } from "react-icons/fc";
+import { FaPeopleCarry, FaGrinBeam, FaBrain } from "react-icons/fa";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
   const orderNowRef = useRef<null | HTMLDivElement>(null);
@@ -108,17 +108,20 @@ const Home: NextPage = () => {
               lineHeight={"110%"}
               // minW={"400px"}
             >
-              Reverse <span style={{color: "#ED8936"}}>Rickroll</span> <br />
+              Reverse <span style={{ color: "#ED8936" }}>Rickroll</span> <br />
               as a Service&nbsp;
               <span style={{ fontSize: "1.5rem", fontStyle: "italic" }}>
                 solution
               </span>
             </Heading>
-            <Text color={"gray.500"} maxW={600}>
+            <Text color={"gray.500"} maxW={600} fontSize="sm">
               Never gonna give you up, never gonna let you down, never gonna run
               around and desert you. Never gonna make you cry, never gonna say
               goodbye, never gonna tell a lie and hurt you.
             </Text>
+            <Heading color="gray.500" letterSpacing={2}>
+              Pay. Ship. Troll.
+            </Heading>
             <Stack
               direction={"column"}
               spacing={3}
@@ -142,28 +145,36 @@ const Home: NextPage = () => {
           </Stack>
           {/* section 2 */}
           <Stack py={24} spacing={12}>
-            <Heading alignSelf={"center"}>A Rickroll you can touch</Heading>
+            <Heading alignSelf={"center"}>
+              A <span style={{ color: "#ED8936" }}>Rickroll</span> you can touch
+            </Heading>
             <Stack spacing={10} align={"center"}>
               <การ์ดฟีเจอร์
                 หัวข้อ={"Rickroll for Everyone"}
                 ข้อความ={
                   "Accessible and affordable, this service is designed for everyone. Even a deaf, or blind, can get rickrolled!"
                 }
-                ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
+                ภาพของพระผู้เป็นเจ้า={
+                  <Icon as={FaPeopleCarry} w={10} h={10} color="orange.400" />
+                }
               />
               <การ์ดฟีเจอร์
                 หัวข้อ={"Breaking the Cliché"}
                 ข้อความ={
                   "Get rid of URL or QR Code rememberer. Tada, a 3D waveform model you can get rickrolled even a deaf or blind!"
                 }
-                ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
+                ภาพของพระผู้เป็นเจ้า={
+                  <Icon as={FaBrain} w={10} h={10} color="orange.400" />
+                }
               />
               <การ์ดฟีเจอร์
-                หัวข้อ={"Satisfaction Guaranteed"}
+                หัวข้อ={"Dissatisfaction Guaranteed"}
                 ข้อความ={
-                  "Not satisfied? We're happy to get rickrolled as you want!"
+                  "Satisfied? We're happy to get rickrolled as you want!"
                 }
-                ภาพของพระผู้เป็นเจ้า={<Icon as={FcAssistant} w={10} h={10} />}
+                ภาพของพระผู้เป็นเจ้า={
+                  <Icon as={FaGrinBeam} w={10} h={10} color="orange.400" />
+                }
               />
             </Stack>
           </Stack>
@@ -198,9 +209,9 @@ const Home: NextPage = () => {
           ones dissapointed!
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-          <การ์ดสินค้า ซอสอะไร๊="ซอสมะเขือเทศ"/>
-          <การ์ดสินค้า ซอสอะไร๊="ซอสมะพร้าว"/>
-          <การ์ดสินค้า ซอสอะไร๊="ซอสมาโย"/>
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมะเขือเทศ" />
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมะพร้าว" />
+          <การ์ดสินค้า ซอสอะไร๊="ซอสมาโย" />
         </SimpleGrid>
         <Button
           colorScheme={"green"}
