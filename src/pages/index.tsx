@@ -58,19 +58,21 @@ const Home: NextPage = () => {
           🐌
         </Button>
       )}
+
       {/* Proudly presented model :3 */}
       <Box
         position="fixed"
         right={{ base: 0 }}
         w={{ base: "100%", md: "50%" }}
         // top={"12.5%"}
-        zIndex={-1}
+        zIndex={0}
         h="100vh"
         filter={{ base: "blur(2px)", md: "none" }}
         opacity={{ base: 0.5, md: 1 }}
       >
         <Model speed={speed} scale={25} />
       </Box>
+
       {/* text โว้ยยยย */}
       <Flex w={"100vw"} direction="row">
         <Stack
@@ -163,13 +165,14 @@ const Home: NextPage = () => {
           flex={{ base: 0, md: 1 }}
         ></Box>
       </Flex>
-      {/* buy now section */}
+      {/* order now section */}
       <Stack
         spacing={{ base: 20, md: 28 }}
         w={"100vw"}
         minH={"100vh"}
         bgColor={"orange.300"}
-        zIndex={0}
+        pos={"relative"}
+        zIndex={10}
         p={20}
         justifyContent={"center"}
         direction={"column"}
@@ -210,7 +213,7 @@ const Home: NextPage = () => {
       </Flex> */}
 
       {/* Footer */}
-      <Box py={10}>
+      <Box py={10} bg="white" pos="relative" zIndex={10}>
         <Flex
           align={"center"}
           _before={{
