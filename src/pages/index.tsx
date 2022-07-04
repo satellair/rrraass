@@ -8,9 +8,12 @@ import {
   Text,
   Button,
   Stack,
+  VStack,
   Icon,
+  IconButton,
   Image,
   SimpleGrid,
+  Link,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -20,7 +23,7 @@ import {
   ดาวน์ซินโดรมโมดอลล์,
 } from "@components";
 // import สินค้าการ์ด from "@components/productCard";
-import { FaPeopleCarry, FaGrinBeam, FaBrain } from "react-icons/fa";
+import { FaPeopleCarry, FaGrinBeam, FaBrain, FaGithub } from "react-icons/fa";
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
   const orderNowRef = useRef<null | HTMLDivElement>(null);
@@ -256,11 +259,30 @@ const Home: NextPage = () => {
             ml: 8,
           }}
         >
-          <Image src="favicon.png" w={20} />
+          <Image
+            src="favicon.png"
+            w={20}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
         </Flex>
-        <Text pt={6} fontSize={"md"} textAlign={"center"} fontWeight="light">
-          #SHiT៦
-        </Text>
+        <VStack pt={6} fontSize={"md"} textAlign={"center"} fontWeight="light">
+          <IconButton
+            aria-label="GitHub"
+            icon={<FaGithub />}
+            variant="link"
+            onClick={() => window.open("https://github.com/thitiwat-t/rrraass")}
+            _hover={{ color: "orange.400" }}
+          />
+          <Link
+            href="https://stupidhackth.github.io/6/"
+            isExternal
+            _hover={{ color: "orange.400", textDecoration: "underline" }}
+          >
+            #SHiT៦
+          </Link>
+        </VStack>
         <Text pt={2} fontSize={"sm"} textAlign={"center"}>
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Copyleft.svg"
