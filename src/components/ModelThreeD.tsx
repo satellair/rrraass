@@ -22,7 +22,7 @@ type Props = { speed?: number; scale?: number };
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
-const Scene = ({ scale = 30 }: { scale: number }) => {
+const Scene = ({ scale }: { scale: number }) => {
   // const materials = useLoader(MTLLoader, "models/rr.mtl");
   const obj = useLoader(OBJLoader, "models/rr.obj", (loader) => {
     // materials.preload();

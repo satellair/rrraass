@@ -15,6 +15,7 @@ import {
   SimpleGrid,
   Link,
   useDisclosure,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   การ์ดฟีเจอร์,
@@ -85,7 +86,10 @@ const Home: NextPage = () => {
         filter={{ base: "blur(2px)", md: "none" }}
         opacity={{ base: 0.5, md: 1 }}
       >
-        <โมเด็ล speed={speed} scale={25} />
+        <โมเด็ล
+          speed={speed}
+          scale={useBreakpointValue({ base: 15, lg: 20, xl: 25 })}
+        />
       </Box>
 
       {/* text โว้ยยยย */}
