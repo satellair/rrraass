@@ -25,6 +25,7 @@ import {
 } from "@components";
 // import สินค้าการ์ด from "@components/productCard";
 import { FaPeopleCarry, FaGrinBeam, FaBrain, FaGithub } from "react-icons/fa";
+
 const Home: NextPage = () => {
   const [speed, setSpeed] = useState(30);
   const orderNowRef = useRef<null | HTMLDivElement>(null);
@@ -108,6 +109,7 @@ const Home: NextPage = () => {
             h={"100vh"}
             align={"center"}
             justifyContent={"center"}
+            position="relative"
           >
             <Heading
               fontWeight={600}
@@ -151,7 +153,7 @@ const Home: NextPage = () => {
             </Stack>
           </Stack>
           {/* section 2 */}
-          <Stack py={24} spacing={12}>
+          <Stack py={24} spacing={12} position="relative">
             <Heading alignSelf={"center"}>
               A <span style={{ color: "#ED8936" }}>Rickroll</span> you can touch
             </Heading>
@@ -269,6 +271,7 @@ const Home: NextPage = () => {
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
+            alt="logo"
           />
         </Flex>
         <VStack pt={6} fontSize={"md"} textAlign={"center"} fontWeight="light">
@@ -292,6 +295,7 @@ const Home: NextPage = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Copyleft.svg"
             w="0.7rem"
             display="inline"
+            alt="copyleft"
           />{" "}
           2022 RRRaaSs. All rights reversed
         </Text>

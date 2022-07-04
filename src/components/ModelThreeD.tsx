@@ -48,6 +48,7 @@ const Loader = () => {
             top="50%"
             left="50%"
             transform="translate(-50%, -50%)"
+            alt="RickLoader"
           />
           <CircularProgress value={progress} color="green.400" size="5rem">
             {/* <CircularProgressLabel>{progress}%</CircularProgressLabel> */}
